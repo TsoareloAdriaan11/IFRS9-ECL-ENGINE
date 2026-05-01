@@ -9,7 +9,7 @@ import os
 db_path = os.path.join(os.path.dirname(__file__), '../../outputs/ifrs9_engine.db')
 engine = create_engine(f'sqlite:///{db_path}', echo=False)
 Base = declarative_base()
-fake = Faker('en_ZA')
+fake = Faker()
 
 class DebtorFinancial(Base):
     __tablename__ = 'debtors_financial'
