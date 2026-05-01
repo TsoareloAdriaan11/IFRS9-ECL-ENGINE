@@ -30,4 +30,4 @@ jobs:
         
     - name: Run IFRS 9 and ML test suite
       run: |
-        pytest tests/
+        PYTHONPATH =. pytest tests/
