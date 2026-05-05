@@ -1,5 +1,5 @@
 import pytest
-from src.ifrs9_engine.ifrs9_staging import classify_stage, calculate_ecl_provision
+from src.actuarial_engine.ifrs9_staging import classify_stage, calculate_ecl_provision
 
 def test_stage_3_hard_rule():
     """Test Step 1: DPD >= 90 overrides everything to Stage 3."""
