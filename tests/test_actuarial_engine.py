@@ -1,3 +1,8 @@
+import sys
+import os
+# Force Python to look in the root directory for the 'src' folder
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 from src.actuarial_engine.ifrs9_staging import classify_stage, calculate_ecl_provision
 
