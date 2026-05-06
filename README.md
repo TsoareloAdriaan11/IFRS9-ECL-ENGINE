@@ -67,7 +67,7 @@ To run this project locally, you must execute the pipeline sequentially to build
 
 **1. Clone the repository and install dependencies:**
 ```bash
-git clone [https://github.com/TsoareloAdriaan11/IFRS9-ECL-ENGINE.git](https://github.com/TsoareloAdriaan11/IFRS9-ECL-ENGINE.git)
+git clone [https://github.com/username/IFRS9-ECL-ENGINE.git]
 cd IFRS9-ECL-ENGINE
 pip install pandas numpy scikit-learn xgboost shap streamlit pytest
 ```
@@ -122,8 +122,7 @@ IFRS9-ECL-ENGINE/
 ├── assets/                  # Dashboard screenshots and SHAP reports
 └── README.md
 
----
 
-**Disclaimer**
-**The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing.**
-**The use of AI is acknowledge in making this project a success.**
+Disclaimer
+The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing.
+The use of AI is acknowledge in making this project a success.
