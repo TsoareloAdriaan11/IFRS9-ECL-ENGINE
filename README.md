@@ -78,3 +78,43 @@ IFRS9-ECL-ENGINE/
 ├── outputs/                 # Stores the generated ifrs9_engine.db SQLite database
 ├── assets/                  # Dashboard screenshots and SHAP reports
 └── README.md
+
+🚀 Installation & "Cold Start" Guide
+To run this project locally, you must execute the pipeline sequentially to build the local SQLite database.
+
+1. Clone the repository and install dependencies:
+
+Bash
+git clone [https://github.com/TsoareloAdriaan11/IFRS9-ECL-ENGINE.git](https://github.com/TsoareloAdriaan11/IFRS9-ECL-ENGINE.git)
+cd IFRS9-ECL-ENGINE
+pip install pandas numpy scikit-learn xgboost shap streamlit pytest
+2. Run the Data Pipeline (Phase 1-3):
+
+Bash
+python -m src.data_generator.generate_data
+python -m src.ml_pipeline.anomaly_detector
+python -m src.ml_pipeline.pd_model
+3. Run the Actuarial Math Engine (Phase 4):
+
+Bash
+python -m src.actuarial_engine.ecl_calculator
+4. Launch the Interactive Dashboard (Phase 5):
+
+Bash
+python -m streamlit run src/dashboard/app.py
+🧪 Automated Testing (CI/CD)
+This engine is secured by a rigorous pytest suite that runs automatically via GitHub Actions on every commit. The test suite mathematically proves the staging logic:
+
+Verifies 90+ DPD triggers Stage 3.
+
+Verifies 30+ DPD without successful rebuttal triggers Stage 2.
+
+Verifies relative PD jumps (e.g., > 2.0x multiple) trigger Stage 2.
+
+Verifies Stage 1 vs. Stage 2/3 Expected Credit Loss math (12-month PD vs Lifetime PD with discount factors).
+
+To run the tests locally:
+
+Bash
+python -m pytest tests/
+Disclaimer: The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing
