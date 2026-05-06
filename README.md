@@ -121,5 +121,9 @@ IFRS9-ECL-ENGINE/
 ├── outputs/                 # Stores the generated ifrs9_engine.db SQLite database
 ├── assets/                  # Dashboard screenshots and SHAP reports
 └── README.md
-*Disclaimer: The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing.
-            The use of AI is acknowledge in making this project a success*
+
+---
+
+**Disclaimer**
+**The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing.**
+**The use of AI is acknowledge in making this project a success.**
