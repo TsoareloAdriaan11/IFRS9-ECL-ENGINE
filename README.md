@@ -60,24 +60,6 @@ The system is built sequentially across 5 distinct phases:
 * **Database:** SQLite3 (`ifrs9_engine.db`)
 * **Frontend:** Streamlit
 * **DevOps & Testing:** Pytest, GitHub Actions (CI/CD)
-
----
-
-## 📂 Project Structure
-
-```text
-IFRS9-ECL-ENGINE/
-│
-├── src/
-│   ├── data_generator/      # Synthetic banking data creation
-│   ├── ml_pipeline/         # AI models (Anomaly Detection & PD Models)
-│   ├── actuarial_engine/    # IFRS 9 Staging logic and ECL math
-│   └── dashboard/           # Streamlit interactive UI
-│
-├── tests/                   # Pytest suite (Math verification & Database checks)
-├── outputs/                 # Stores the generated ifrs9_engine.db SQLite database
-├── assets/                  # Dashboard screenshots and SHAP reports
-└── README.md
 ---
 
 ## 🚀 Installation & "Cold Start" Guide
@@ -123,5 +105,21 @@ python -m pytest tests/
 ```
 
 ---
+
+## 📂 Project Structure
+
+```text
+IFRS9-ECL-ENGINE/
+│
+├── src/
+│   ├── data_generator/      # Synthetic banking data creation
+│   ├── ml_pipeline/         # AI models (Anomaly Detection & PD Models)
+│   ├── actuarial_engine/    # IFRS 9 Staging logic and ECL math
+│   └── dashboard/           # Streamlit interactive UI
+│
+├── tests/                   # Pytest suite (Math verification & Database checks)
+├── outputs/                 # Stores the generated ifrs9_engine.db SQLite database
+├── assets/                  # Dashboard screenshots and SHAP reports
+└── README.md
 *Disclaimer: The data generated and used in this repository is entirely synthetic. This engine is a portfolio project and should not be used for live regulatory reporting without extensive secondary auditing.
             The use of AI is acknowledge in making this project a success*
