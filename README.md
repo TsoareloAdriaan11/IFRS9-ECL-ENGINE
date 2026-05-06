@@ -7,7 +7,7 @@
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-success)
 
 ## 📌 Executive Summary
-This project is an enterprise-grade, end-to-end quantitative finance pipeline designed to calculate Expected Credit Loss (ECL) provisions in strict accordance with the **IFRS 9 Regulatory Standard**. 
+This project is an enterprise-grade, end-to-end quantitative risk data science or credit risk model pipeline designed to calculate Expected Credit Loss (ECL) provisions in strict accordance with the **IFRS 9 Regulatory Standard**. 
 
 Unlike traditional static actuarial models, this engine integrates **Machine Learning** to dynamically predict Probability of Default (PD) and detect behavioral anomalies, merging advanced data science with strict banking regulations. 
 
@@ -21,7 +21,7 @@ This enterprise quantitative risk engine was architected and developed in collab
 ## 📸 Executive Dashboard & Auditing
 
 ### IFRS 9 Portfolio Risk Dashboard
-![Streamlit Dashboard](assets/executive_dashboard.jpg)
+![Streamlit Dashboard](assets/executive_dashboard.png)
 *Interactive UI built with Streamlit allowing risk managers to filter the portfolio by IFRS 9 Stage, view total Exposure at Default (EAD), and sort high-risk accounts.*
 
 ### SHAP Explainability Auditor Report
