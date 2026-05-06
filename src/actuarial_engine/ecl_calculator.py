@@ -9,7 +9,7 @@ def calculate_ecl():
     conn = sqlite3.connect(db_path)
     
     # 1. THE PERFECTED SQL QUERY
-    # Pulling exactly what exists in your database
+    # We replaced 'current_balance' with 'outstanding_balance' to match your database
     query = """
         SELECT 
             f.debtor_id, 
@@ -39,7 +39,6 @@ def calculate_ecl():
     for index, row in df.iterrows():
         
         # --- Translation Layer ---
-        # 1. Derive a single DPD integer from the arrears buckets
         if row['age_90_plus_days'] > 0:
             dpd = 95
         elif row['age_60_days'] > 0:
@@ -49,8 +48,6 @@ def calculate_ecl():
         else:
             dpd = 0
             
-        # 2. Derive a mock Original PD based on their FICO score (Lower FICO = Higher starting PD)
-        # 3. Assume no loans are restructured for this synthetic dataset
         pd_orig = max(0.01, (850 - row['fico_equivalent']) / 10000) 
         restructured_flag = 0 
         
