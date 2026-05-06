@@ -79,7 +79,7 @@ IFRS9-ECL-ENGINE/
 ├── assets/                  # Dashboard screenshots and SHAP reports
 └── README.md
 
-🚀 Installation & "Cold Start" Guide
+## 🚀 Installation & "Cold Start" Guide
 To run this project locally, you must execute the pipeline sequentially to build the local SQLite database.
 
 1. Clone the repository and install dependencies:
