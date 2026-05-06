@@ -21,11 +21,11 @@ This enterprise quantitative risk engine was architected and developed in collab
 ## 📸 Executive Dashboard & Auditing
 
 ### IFRS 9 Portfolio Risk Dashboard
-![Streamlit Dashboard](executive_dashboard.jpg)
+![Streamlit Dashboard](assets/executive_dashboard.jpg)
 *Interactive UI built with Streamlit allowing risk managers to filter the portfolio by IFRS 9 Stage, view total Exposure at Default (EAD), and sort high-risk accounts.*
 
 ### SHAP Explainability Auditor Report
-![SHAP Auditor Report](shap_auditor_report.png)
+![SHAP Auditor Report](assets/shap_auditor_report.png)
 *AI Model auditing using SHAP values to explain the driving factors behind Probability of Default predictions, ensuring regulatory transparency.*
 
 ---
