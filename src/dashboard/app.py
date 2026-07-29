@@ -92,7 +92,10 @@ def load_all():
     ledger   = pd.read_sql("SELECT * FROM final_ecl_ledger",          conn)
     metrics  = pd.read_sql("SELECT * FROM model_validation_metrics",   conn)
     alt_data = pd.read_sql("SELECT * FROM debtors_alternative_data",   conn)
-    fin_data = pd.read_sql("SELECT debtor_id, loan_purpose FROM debtors_financial", conn)
+    
+    # [FIX] Pull first_name and last_name from the financial table
+    fin_data = pd.read_sql("SELECT debtor_id, loan_purpose, first_name, last_name FROM debtors_financial", conn)
+    
     conn.close()
     return ledger, metrics, alt_data, fin_data
 
