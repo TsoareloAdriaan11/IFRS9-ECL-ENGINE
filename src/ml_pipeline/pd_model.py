@@ -229,12 +229,14 @@ def train_pd_model(lambda_fair: float = 0.1):
     # gender_protected_attribute is EXCLUDED from X (used only in loss fn)
     DROP_COLS = [
         'debtor_id',
+        'first_name',                # [FIX] Drop text column
+        'last_name',                 # [FIX] Drop text column
         'age_30_days', 'age_60_days', 'age_90_plus_days',   # data leakage
-        'loan_purpose',                                        # categorical (V1 kept dropping)
+        'loan_purpose',                                     # categorical (V1 kept dropping)
         'default_flag',
-        'gender_protected_attribute',                          # [NEW V2] protected — audit only
-        'device_fingerprint_id',                               # text ID — not a feature
-        'geographic_cluster_id',                               # text ID — graph layer only
+        'gender_protected_attribute',                       # [NEW V2] protected — audit only
+        'device_fingerprint_id',                            # text ID — not a feature
+        'geographic_cluster_id',                            # text ID — graph layer only
     ]
     X = df.drop(columns=[c for c in DROP_COLS if c in df.columns])
     y = df['default_flag']
